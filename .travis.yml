@@ -7,4 +7,4 @@ before_install:
   - docker build -t lhoangphuong/react-frontend -f Dockerfile.dev .
 
 script:
-  - docker run lhoangphuong/react-frontend npm run test -- --coverage
+  - docker run -e CI=true lhoangphuong/react-frontend npm run test
